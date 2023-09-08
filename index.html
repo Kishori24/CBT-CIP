@@ -3,82 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <style>
-      body, button, input {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
-    
-    .calculator {
-        max-width: 300px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #631818;
-        border-radius: 5px;
-        background-color: #250b0b;
-    }
-    
-    #display {
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 10px;
-        font-size: 1.5em;
-    }
-    
-    .buttons {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-    }
-    
-    button {
-        padding: 10px;
-        font-size: 1.2em;
-        border: none;
-        background-color: #693636;
-        cursor: pointer;
-    }
-    
-    .operator {
-        background-color: #f39c12;
-        color: #fff;
-    }
-    
-    .clear {
-        background-color: #e74c3c;
-        color: #fff;
-    }
-    .calculate {
-        background-color: #2ecc71;
-        color: #fff;
-    }
-</style>
+    <title>TODO-LIST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" readonly>
-        <div class="buttons">
-            <button class="operator" onclick="appendToDisplay('+')">+</button>
-            <button class="operator" onclick="appendToDisplay('-')">-</button>
-            <button class="operator" onclick="appendToDisplay('*')">*</button>
-            <button class="operator" onclick="appendToDisplay('/')">/</button>
-            <button class="operator" onclick="appendToDisplay(' % ')">/</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button class="clear" onclick="clearDisplay()">AC</button>
-            <button class="calculate" onclick="calculate()">=</button>
+    <body>
+        <div id="LIST" class="container">
+            <div class="todo">
+            <h1>To Do List</h1>
+                <div class="row">
+                    <input type="text" id="input" placeholder="what you want to plan">
+                    <button onclick="tasks()"><i class="material-icons"></i></button>
+                    <div id="tasks"></div>
+                </div>
+                <ul id="list">
+                     
+    
+                </ul>
+    
+            </div>
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <script src="todolist.js"></script>
+    </body>
 </html>
